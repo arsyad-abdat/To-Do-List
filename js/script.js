@@ -25,8 +25,13 @@ function onAddTaskClicked(event) {
 
 function onTodoListClicked(event) {
     let targetElement = event.toElement;
-    console.log(targetElement);
-}
+    //console.log(targetElement);
+
+    /*while(!targetElement.classList.contains("task")) {
+        targetElement = targetElement.parentElement
+    }
+    let checkbox = targetElement.querySelector(".checkbox")
+}*/
 
 // Step 3: Link element, function and event
 // Add event listener, for when they click 
