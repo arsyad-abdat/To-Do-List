@@ -3,18 +3,23 @@ let addTaskButton = document.getElementById("add-task")
 let newTaskInput = document.getElementById("task-input")
 let todoListContainer = document.getElementById("todo-list") //go search webpage for thing with to do list tag
 
+let templateElement = document.getElementById("list-item-template") //Locate ID
+let template = templateElement.innerHTML
+
 // Step 2: Write a function to implement the behavioru
 
 function onAddTaskClicked(event) {
     let taskName = newTaskInput.value;
     newTaskInput.value = ""; //Wipe content
 
+
     //log it to console
-    console.log(taskName)
+    //console.log(taskName)
 
     // When that event happens, read input, take input and put it into container. take the todo list container
-    // then insert adjacent html
-    todoListContainer.insertAdjacentHTML("afterbegin",taskName);
+    
+    let taskHTML = template.replace("<!-- TASK_NAME -->", taskName);
+    todoListContainer.insertAdjacentHTML("afterbegin",taskHTML);
 
 }
 
