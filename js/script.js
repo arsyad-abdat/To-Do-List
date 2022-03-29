@@ -6,7 +6,7 @@ let todoListContainer = document.getElementById("todo-list") //go search webpage
 // Step 2: Write a function to implement the behavioru
 
 function onAddTaskClicked(event) {
-    let taskName = newTaskInput.ariaValueMax;
+    let taskName = newTaskInput.value;
     newTaskInput.value = ""; //Wipe content
 
     //log it to console
